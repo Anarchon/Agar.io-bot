@@ -8,8 +8,7 @@
 // ==/UserScript==
 
 var aposLauncherVersion = 3.052;
-var Account = "Anarchon";
-var Branch = "beta";
+
 Number.prototype.mod = function(n) {
     return ((this % n) + n) % n;
 };
@@ -17,11 +16,12 @@ Number.prototype.mod = function(n) {
 Array.prototype.peek = function() {
     return this[this.length - 1];
 }
-
+var Account = "Anarchon";
+var Branch = "beta";
 var sha = "efde0488cc2cc176db48dd23b28a20b90314352b";
 function getLatestCommit() {
     window.jQuery.ajax({
-            url: "https://api.github.com/repos/"+Account+"/Agar.io-bot/git/refs/heads/"+Branch,
+            url: "https://api.github.com/repos/" + Account + "/Agar.io-bot/git/refs/heads/" + Branch,
             cache: false,
             dataType: "jsonp"
         }).done(function(data) {
@@ -41,7 +41,7 @@ function getLatestCommit() {
                 window.jQuery("#" + prefix + "Dialog").show();
             }
 
-            window.jQuery.get('https://raw.githubusercontent.com/"+Account+"/Agar.io-bot/"+Branch+"/launcher.user.js?' + Math.floor((Math.random() * 1000000) + 1), function(data) {
+            window.jQuery.get('https://raw.githubusercontent.com/" + Account + "/Agar.io-bot/" + Branch + "/launcher.user.js?' + Math.floor((Math.random() * 1000000) + 1), function(data) {
                 var latestVersion = data.replace(/(\r\n|\n|\r)/gm, "");
                 latestVersion = latestVersion.substring(latestVersion.indexOf("// @version") + 11, latestVersion.indexOf("// @grant"));
 
@@ -49,7 +49,7 @@ function getLatestCommit() {
                 var myVersion = parseFloat(aposLauncherVersion + 0.0000);
 
                 if (latestVersion > myVersion) {
-                    update("aposLauncher", "launcher.user.js", "https://github.com/"+Account+"/Agar.io-bot/blob/" + sha + "/launcher.user.js/");
+                    update("aposLauncher", "launcher.user.js", "https://github.com/" + Account + "/Agar.io-bot/blob/" + sha + "/launcher.user.js/");
                 }
                 console.log('Current launcher.user.js Version: ' + myVersion + " on Github: " + latestVersion);
             });
