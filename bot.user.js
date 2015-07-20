@@ -6,16 +6,9 @@
 // @grant       none
 // @author      http://www.twitch.tv/apostolique
 // ==/UserScript==
-var Account = "Anarchon";
-var Branch = "beta";
+
 var aposBotVersion = 3.554;
 
-//TODO: Team mode
-//      Detect when people are merging
-//      Split to catch smaller targets
-//      Angle based cluster code
-//      Better wall code
-//      In team mode, make allies be obstacles.
 
 Number.prototype.mod = function(n) {
     return ((this % n) + n) % n;
@@ -24,8 +17,6 @@ Number.prototype.mod = function(n) {
 Array.prototype.peek = function() {
     return this[this.length - 1];
 };
-
-var sha = "efde0488cc2cc176db48dd23b28a20b90314352b";
 
 console.log("Running Apos Bot!");
 (function(f, g) {
