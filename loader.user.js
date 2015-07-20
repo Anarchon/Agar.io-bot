@@ -3,12 +3,12 @@
 // @namespace   AposLoader
 // @description Grabs latest versions of the bot scripts automatically.
 // @include     http://agar.io/
-// @version     1.31
+// @version     1.32
 // @grant       none
 // @author      http://www.twitch.tv/apostolique
 // ==/UserScript==
 
-var aposLoaderVersion = 1.31;
+var aposLoaderVersion = 1.32;
 
 var sha = "3c783dbe83b4040a955e4f4fbdc1d1825fdee9e1";
 function getLatestCommit() {
