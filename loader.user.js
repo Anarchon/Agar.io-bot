@@ -3,15 +3,15 @@
 // @namespace   AposLoader
 // @description Grabs latest versions of the bot scripts automatically.
 // @include     http://agar.io/
-// @version     1.35
+// @version     1.36
 // @grant       none
 // @author      http://www.twitch.tv/apostolique
 // ==/UserScript==
 
-var aposLoaderVersion = 1.35;
+var aposLoaderVersion = 1.36;
 var Account = "Anarchon";
 var Branch = "beta";
-var sha = "66cc1409edd884ae46e6df09ec1e60a889624c14";
+var sha = "0f69175ed0525cb7ba681be2c2f7fe83ee8a0599";
 function getLatestCommit() {
     window.jQuery.ajax({
             url: "https://api.github.com/repos/"+Account +"/Agar.io-bot/git/refs/heads/" + Branch,
