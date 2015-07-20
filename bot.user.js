@@ -6,7 +6,8 @@
 // @grant       none
 // @author      http://www.twitch.tv/apostolique
 // ==/UserScript==
-
+var Account = "Anarchon";
+var Branch = "beta";
 var aposBotVersion = 3.551;
 
 //TODO: Team mode
@@ -15,7 +16,7 @@ var aposBotVersion = 3.551;
 //      Angle based cluster code
 //      Better wall code
 //      In team mode, make allies be obstacles.
-
+" + Account +"
 Number.prototype.mod = function(n) {
     return ((this % n) + n) % n;
 };
@@ -27,7 +28,7 @@ Array.prototype.peek = function() {
 var sha = "efde0488cc2cc176db48dd23b28a20b90314352b";
 function getLatestCommit() {
     window.jQuery.ajax({
-            url: "https://api.github.com/repos/apostolique/Agar.io-bot/git/refs/heads/master",
+            url: "https://api.github.com/repos/" + Account +"/Agar.io-bot/git/refs/heads/" + Branch ,
             cache: false,
             dataType: "jsonp"
         }).done(function(data) {
@@ -47,7 +48,7 @@ function getLatestCommit() {
                 window.jQuery("#" + prefix + "Dialog").show();
             }
 
-            $.get('https://raw.githubusercontent.com/Apostolique/Agar.io-bot/master/bot.user.js?' + Math.floor((Math.random() * 1000000) + 1), function(data) {
+            $.get('https://raw.githubusercontent.com/" + Account +"/Agar.io-bot/"+ Branch + "/bot.user.js?' + Math.floor((Math.random() * 1000000) + 1), function(data) {
                 var latestVersion = data.replace(/(\r\n|\n|\r)/gm,"");
                 latestVersion = latestVersion.substring(latestVersion.indexOf("// @version")+11,latestVersion.indexOf("// @grant"));
 
@@ -56,7 +57,7 @@ function getLatestCommit() {
                 
                 if(latestVersion > myVersion)
                 {
-                    update("aposBot", "bot.user.js", "https://github.com/Apostolique/Agar.io-bot/blob/" + sha + "/bot.user.js/");
+                    update("aposBot", "bot.user.js", "https://github.com/" + Account +"/Agar.io-bot/blob/" + sha + "/bot.user.js/");
                 }
                 console.log('Current bot.user.js Version: ' + myVersion + " on Github: " + latestVersion);
             });
@@ -122,7 +123,7 @@ console.log("Running Apos Bot!");
         var offsetY = 0;
 
         var ratioX = tempD / (x2 - x1);
-        var ratioY = tempD / (y2 - y1);
+        var ratioY = tempD / (y2 - y1);
 
         offsetX = x2 - (s2 / ratioX);
         offsetY = y2 - (s2 / ratioY);
