@@ -10,7 +10,7 @@
 
 var aposLoaderVersion = 1.4;
 
-var sha = "58361614d10b3f8d4c3a0545ba699e67d3bdd4d7";
+var sha = "814b6c1aefef2945570d82da879d800f38998437";
 function getLatestCommit() {
     window.jQuery.ajax({
             url: "https://api.github.com/repos/Anarchon/Agar.io-bot/git/refs/heads/master",
