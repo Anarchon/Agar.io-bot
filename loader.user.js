@@ -21,9 +21,7 @@ function getLatestCommit() {
             console.dir(data["data"])
             console.log("hmm: " + data["data"]["object"]["sha"]);
             sha = data["data"]["object"]["sha"];
-            Branch = data["data"]["object"]["Branch"];
-            Account = data["data"]["object"]["Account"];
-          
+            console.log ("acc: "+acc)
             window.jQuery.get('https://raw.githubusercontent.com/' + Account + '/Agar.io-bot/' + Branch +'/launcher.user.js?' + Math.floor((Math.random() * 1000000) + 1), function(data) {
                 var latestVersion = data.replace(/(\r\n|\n|\r)/gm, "");
                 latestVersion = latestVersion.substring(latestVersion.indexOf("// @version") + 11, latestVersion.indexOf("// @grant"));
