@@ -28,8 +28,7 @@ function getLatestCommit() {
             console.dir(data["data"])
             console.log("hmm: " + data["data"]["object"]["sha"]);
             sha = data["data"]["object"]["sha"];
-            Branch = data["data"]["object"]["Branch"];
-            Account = data["data"]["object"]["Account"];
+    
             function update(prefix, name, url) {
                 window.jQuery(document.body).prepend("<div id='" + prefix + "Dialog' style='position: absolute; left: 0px; right: 0px; top: 0px; bottom: 0px; z-index: 100; display: none;'>");
                 window.jQuery('#' + prefix + 'Dialog').append("<div id='" + prefix + "Message' style='width: 350px; background-color: #FFFFFF; margin: 100px auto; border-radius: 15px; padding: 5px 15px 5px 15px;'>");
