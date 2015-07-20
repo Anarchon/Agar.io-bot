@@ -11,7 +11,7 @@
 var aposLoaderVersion = 1.3;
 var Account = "Anarchon";
 var Branch = "beta";
-var sha = "efde0488cc2cc176db48dd23b28a20b90314352b";
+var sha = "5de045752175530e0e9d2ab2a0fcf1f1d10af6ff";
 function getLatestCommit() {
     window.jQuery.ajax({
             url: "https://api.github.com/repos/"+Account +"/Agar.io-bot/git/refs/heads/" + Branch,
