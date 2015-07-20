@@ -9,8 +9,8 @@
 // ==/UserScript==
 
 var aposLoaderVersion = 1.3;
-var acc = "Anarchon";
-var branch = "beta";
+var Account = "Anarchon";
+var Branch = "beta";
 var sha = "efde0488cc2cc176db48dd23b28a20b90314352b";
 function getLatestCommit() {
     window.jQuery.ajax({
