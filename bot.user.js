@@ -16,7 +16,7 @@ var aposBotVersion = 3.551;
 //      Angle based cluster code
 //      Better wall code
 //      In team mode, make allies be obstacles.
-" + Account +"
+
 Number.prototype.mod = function(n) {
     return ((this % n) + n) % n;
 };
