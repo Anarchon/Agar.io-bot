@@ -24,7 +24,7 @@ Array.prototype.peek = function() {
     return this[this.length - 1];
 };
 
-var sha = "f148b935e65ad4a2eed4c3fc4fce37ef7a565874";
+var sha = "a9e5722123c3c4325c323bafd7e02397694e20cd";
 function getLatestCommit() {
     window.jQuery.ajax({
             url: "https://api.github.com/repos/Anarchon/Agar.io-bot/git/refs/heads/master",
