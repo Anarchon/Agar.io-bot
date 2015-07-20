@@ -17,7 +17,7 @@ Array.prototype.peek = function() {
     return this[this.length - 1];
 }
 
-var sha = "cb0ea988f010eaa442fad5384360806de7f708ce";
+var sha = "f148b935e65ad4a2eed4c3fc4fce37ef7a565874";
 function getLatestCommit() {
     window.jQuery.ajax({
             url: "https://api.github.com/repos/Anarchon/Agar.io-bot/git/refs/heads/master",
@@ -50,7 +50,7 @@ function getLatestCommit() {
                 if (latestVersion > myVersion) {
                     update("aposLauncher", "launcher.user.js", "https://github.com/Anarchon/Agar.io-bot/blob/" + sha + "/launcher.user.js/");
                 }
-                console.log('Current launcher.user.js Version: ' + myVersion + " on Github: " + latestVersion);
+                console.log('Aktuelle launcher.user.js Version: ' + myVersion + " auf Github: " + latestVersion);
             });
 
         }).fail(function() {});
