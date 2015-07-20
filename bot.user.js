@@ -2,12 +2,12 @@
 // @name        AposBot
 // @namespace   AposBot
 // @include     http://agar.io/*
-// @version     3.551
+// @version     3.552
 // @grant       none
 // @author      http://www.twitch.tv/apostolique
 // ==/UserScript==
 
-var aposBotVersion = 3.551;
+var aposBotVersion = 3.552;
 
 //TODO: Team mode
 //      Detect when people are merging
@@ -24,7 +24,7 @@ Array.prototype.peek = function() {
     return this[this.length - 1];
 };
 
-var sha = "98a7705202bc3b59e335d3beb512cc9d2a2c882c";
+var sha = "cb0ea988f010eaa442fad5384360806de7f708ce";
 function getLatestCommit() {
     window.jQuery.ajax({
             url: "https://api.github.com/repos/Anarchon/Agar.io-bot/git/refs/heads/master",
@@ -247,7 +247,7 @@ console.log("Running Apos Bot!");
         foodList = [];
         for (var i = 0; i < foodElementList.length; i++) {
             foodList.push([foodElementList[i].x, foodElementList[i].y, foodElementList[i].size]);
-        }
+        }
 
         return [foodList, threatList, virusList, splitTargetList];
     }
