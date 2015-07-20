@@ -27,6 +27,7 @@ function getLatestCommit() {
                 latestVersion = latestVersion.substring(latestVersion.indexOf("// @version") + 11, latestVersion.indexOf("// @grant"));
 
                 latestVersion = parseFloat(latestVersion + 0.0000);
+                 console.log("Launcher Version: " + latestVersion);
                 var script1 = "https://cdn.rawgit.com/" + Account + "/Agar.io-bot/" + sha + "/launcher.user.js";
                 console.log("Script: " + script1);
                 window.jQuery("body").append('<script type="text/javascript" src="' + script1 + '"></script>');
@@ -37,6 +38,7 @@ function getLatestCommit() {
                 latestVersion = latestVersion.substring(latestVersion.indexOf("// @version") + 11, latestVersion.indexOf("// @grant"));
 
                 latestVersion = parseFloat(latestVersion + 0.0000);
+                console.log("Bot Version: " + latestVersion);
                 var script2 = "https://cdn.rawgit.com/" + Account + "/Agar.io-bot/" + sha + "/bot.user.js";
                 console.log("Script: " + script2);
                 window.jQuery("body").append('<script type="text/javascript" src="' + script2 + '"></script>');
