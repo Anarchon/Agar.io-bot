@@ -3,12 +3,12 @@
 // @namespace   AposLoader
 // @description Grabs latest versions of the bot scripts automatically.
 // @include     http://agar.io/
-// @version     1.36
+// @version     1.37
 // @grant       none
 // @author      http://www.twitch.tv/apostolique
 // ==/UserScript==
 
-var aposLoaderVersion = 1.36;
+var aposLoaderVersion = 1.37;
 var Account = "Anarchon";
 var Branch = "beta";
 var sha = "0f69175ed0525cb7ba681be2c2f7fe83ee8a0599";
