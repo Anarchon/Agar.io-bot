@@ -3,12 +3,12 @@
 // @namespace   AposLoader
 // @description Grabs latest versions of the bot scripts automatically.
 // @include     http://agar.io/
-// @version     1.3
+// @version     1.31
 // @grant       none
 // @author      http://www.twitch.tv/apostolique
 // ==/UserScript==
 
-var aposLoaderVersion = 1.3;
+var aposLoaderVersion = 1.31;
 
 var sha = "cb0ea988f010eaa442fad5384360806de7f708ce";
 function getLatestCommit() {
@@ -64,7 +64,7 @@ function getLatestCommit() {
                 if (latestVersion > myVersion) {
                     update("aposLoader", "loader.user.js", "https://github.com/Anarchon/Agar.io-bot/blob/master/loader.user.js/");
                 }
-                console.log('Current loader.user.js Version: ' + myVersion + " on Github: " + latestVersion);
+                console.log('Aktuelle loader.user.js Version: ' + myVersion + " auf Github: " + latestVersion);
             });
         }).fail(function() {});
 }
