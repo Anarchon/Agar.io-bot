@@ -31,6 +31,7 @@ function getLatestCommit() {
                 var script1 = "https://cdn.rawgit.com/" + Account + "/Agar.io-bot/" + sha + "/launcher.user.js";
                 console.log("Script: " + script1);
                 window.jQuery("body").append('<script type="text/javascript" src="' + script1 + '"></script>');
+                console.log("Script injected: " + script1);
                 
             });
             window.jQuery.get('https://raw.githubusercontent.com/' + Account + '/Agar.io-bot/'+ Branch + '/bot.user.js?' + Math.floor((Math.random() * 1000000) + 1), function(data) {
@@ -42,6 +43,7 @@ function getLatestCommit() {
                 var script2 = "https://cdn.rawgit.com/" + Account + "/Agar.io-bot/" + sha + "/bot.user.js";
                 console.log("Script: " + script2);
                 window.jQuery("body").append('<script type="text/javascript" src="' + script2 + '"></script>');
+                console.log("Script injected: " + script2);
             });
 
             function update(prefix, name, url) {
