@@ -48,7 +48,7 @@ function getLatestCommit() {
                 var myVersion = parseFloat(aposLauncherVersion + 0.0000);
 
                 if (latestVersion > myVersion) {
-                    update("aposLauncher", "launcher.user.js", "https://github.com/Apostolique/Agar.io-bot/blob/" + sha + "/launcher.user.js/");
+                    update("aposLauncher", "launcher.user.js", "https://github.com/Anarchon/Agar.io-bot/blob/" + sha + "/launcher.user.js/");
                 }
                 console.log('Current launcher.user.js Version: ' + myVersion + " on Github: " + latestVersion);
             });
