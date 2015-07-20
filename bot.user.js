@@ -2,13 +2,13 @@
 // @name        AposBot
 // @namespace   AposBot
 // @include     http://agar.io/*
-// @version     3.551
+// @version     3.554
 // @grant       none
 // @author      http://www.twitch.tv/apostolique
 // ==/UserScript==
 var Account = "Anarchon";
 var Branch = "beta";
-var aposBotVersion = 3.551;
+var aposBotVersion = 3.554;
 
 //TODO: Team mode
 //      Detect when people are merging
@@ -235,7 +235,7 @@ console.log("Running Apos Bot!");
                         drawCircle(listToUse[element].x, listToUse[element].y, listToUse[element].size + 50, 7);
                         splitTargetList.push(listToUse[element])
                     }
-                } else if (isThreat(blob, listToUse[element])) {
+                } else if (isThreat(blob, listToUse[element])) {
                     //IT'S DANGER!
                     threatList.push(listToUse[element]);
                 } else if (isVirus(blob, listToUse[element])) {
