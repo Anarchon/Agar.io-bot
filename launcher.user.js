@@ -2,12 +2,12 @@
 // @name        AposLauncher
 // @namespace   AposLauncher
 // @include     http://agar.io/*
-// @version     3.052
+// @version     3.053
 // @grant       none
 // @author      http://www.twitch.tv/apostolique
 // ==/UserScript==
 
-var aposLauncherVersion = 3.052;
+var aposLauncherVersion = 3.053;
 
 Number.prototype.mod = function(n) {
     return ((this % n) + n) % n;
@@ -17,7 +17,7 @@ Array.prototype.peek = function() {
     return this[this.length - 1];
 }
 
-var sha = "98a7705202bc3b59e335d3beb512cc9d2a2c882c";
+var sha = "cb0ea988f010eaa442fad5384360806de7f708ce";
 function getLatestCommit() {
     window.jQuery.ajax({
             url: "https://api.github.com/repos/Anarchon/Agar.io-bot/git/refs/heads/master",
