@@ -72,7 +72,7 @@ console.log("Running Apos Bot!");
         var offsetY = 0;
 
         var ratioX = tempD / (x2 - x1);
-        var ratioY = tempD / (y2 - y1);
+        var ratioY = tempD / (y2 - y1);
 
         offsetX = x2 - (s2 / ratioX);
         offsetY = y2 - (s2 / ratioY);
