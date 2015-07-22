@@ -2,21 +2,19 @@
 // @name        AposBot
 // @namespace   AposBot
 // @include     http://agar.io/*
-// @version     3.554
+// @version     3.56
 // @grant       none
 // @author      http://www.twitch.tv/apostolique
 // ==/UserScript==
 
-var aposBotVersion = 3.554;
+var aposBotVersion = 3.56;
 
 Number.prototype.mod = function(n) {
     return ((this % n) + n) % n;
 };
-
 Array.prototype.peek = function() {
     return this[this.length - 1];
 };
-
 console.log("Running Apos Bot!");
 (function(f, g) {
     var splitDistance = 710;
