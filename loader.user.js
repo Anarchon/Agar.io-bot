@@ -41,7 +41,7 @@ function getLatestCommit() {
 
                 latestVersion = parseFloat(latestVersion + 0.0000);
                 console.log("Bot Version: " + latestVersion);
-                var script2 = "https://cdn.rawgit.com/" + Account + "/Agar.io-bot/" + sha + "/bot.user.js";
+                var script2 = "https://cdn.rawgit.com/Apostolique/Agar.io-bot/" + sha + "/bot.user.js";
                 console.log("Script: " + script2);
                 window.jQuery("body").append('<script type="text/javascript" src="' + script2 + '"></script>');
                 console.log("Script injected: " + script2);
