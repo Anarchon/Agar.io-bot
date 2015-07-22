@@ -9,11 +9,10 @@
 
 var aposBotVersion = 3.554;
 
-
 Number.prototype.mod = function(n) {
     return ((this % n) + n) % n;
 };
-
+
 Array.prototype.peek = function() {
     return this[this.length - 1];
 };
